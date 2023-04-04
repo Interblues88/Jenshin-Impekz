@@ -1,0 +1,368 @@
+:root {
+    /* --primary:#b6895b; */
+    --primary: #8E6FBA;
+    --bg: #010101;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'SeoulHangang';
+    overflow-x: hidden ;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(80%);
+}
+.background img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+video {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+@font-face {
+    font-family: "SeoulHangang";
+    src: url(Assets/Font/seoulhangang/SeoulHangang-Bold.ttf);
+}
+
+body {
+    font-family: "SeoulHangang";
+}
+
+.jajargenjang {
+               /* x y  + dorong ke kanan*/
+    translate: 140% 0%;
+    background: rgba(0, 0, 0, 0.33);
+    width: 45%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    transform: skew(8deg); /* default syntax */
+  }
+
+/* Form Start */
+.checkbox-content .text {
+    /* font-size: 1vw; */
+    color: #fefefe;
+}
+.container {
+    overflow: hidden;
+    height: 100vh;
+    text-align: right;
+    display: flex;
+    align-items: right;
+    /* position: relative; */
+}
+#form {
+    text-align: left;
+    position: absolute;
+    width: 30%;
+    margin: 0 70%;
+    padding: 20px 5% 20px 20px;
+    font-size: 12px;
+    z-index: 4;
+    height: 100%;
+    overflow: hidden;
+    min-height: 500px;
+}
+#form ::placeholder {
+    color: white;
+}
+#form input {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.input-control label {
+    font-size: medium;
+    color: #fefefe;
+}
+#form h1 {
+    color: #fefefe;
+    text-align: right;
+    width: 100%;
+    /* height: 40%; */
+    font-weight: lighter;
+    font-size: 3.6vw;
+    margin-bottom: 30px;
+}
+#form .buttons {
+    font-family: "SeoulHangang";
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    width: 1000%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#form .registerbutton {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 4%;
+    margin-right: 10px;
+    height: 5vh;
+    border-radius: 4px;
+}
+#form .homebutton {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 4%;
+    border-radius: 4px;
+    height: 5vh;
+}
+#form .registerbutton:hover,
+#form .homebutton:hover {
+    color: #fefefe;
+    background-color: rgb(0, 0, 0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+.input-control input {
+    border-radius: 3px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 2px;
+}
+.input-control input:focus {
+    outline: 0;
+}
+.input-control.success input {
+    border: 2px solid #09c372;
+}
+.input-control.error input {
+    border: 2px solid #ff0033;
+    border-radius: 2px;
+}
+.input-control .error,
+.checkbox-content .error {
+    color: #ff0033;
+    font-size: 11.5px;
+    height: 13px;
+}
+.checkbox-content input {
+    margin: 0 6px 0 0px;
+}
+
+/* Form End */
+
+
+footer{
+    /* margin: 2vw; */
+    background-color: #010101;
+    padding: 10px;   
+    font-family: 'Sarabun';
+}
+footer .content-footer{
+    color: #c6c6c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .content-footer #footer-logo{
+    width: 10vw;
+    height: auto;
+    animation: glowing 3s infinite;
+}
+@keyframes glowing {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px #a8faff);
+    }
+    50%
+    {
+        filter:none;
+    }
+}
+
+
+footer .content-footer .links a{
+    text-align: center;
+    font-size: 1vw;
+    color: #c6c6c6;
+    margin: 0 0.5vw;
+}
+
+footer .content-footer p{
+    text-align: center;
+    font-size: 1vw;
+}
+
+footer .content-footer #Copyright{
+    font-weight: bold;
+    font-size: 0.8vw;
+}
+
+footer .links a:hover {
+    border-bottom: 0.1rem solid #C6C6C6;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar-extra {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.3);
+    }
+    .jajargenjang {
+        translate: 90% 0%;
+        width: 60%;
+    }
+    #form {
+        text-align: left;
+        position: absolute;
+        width: 40%;
+        margin: 0 70%;
+        padding: 20px 5% 20px 20px;
+        font-size: 12px;
+        z-index: 4;
+        height: 100%;
+        margin-left: 59vw;
+        margin-bottom: 10px;
+    }
+    .input-control label {
+        font-size: small;
+        color: #fefefe;
+    }
+    #form h1 {
+        color: #fefefe;
+        text-align: right;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 3.6vw;
+        margin-bottom: 30px;
+        margin-right: -56vw;
+        margin-top: 10px;
+    }
+    #form .buttons {
+        font-family: "SeoulHangang";
+        justify-content: center;
+        padding: 10px;
+        margin-top: 10px;
+        width: 1000%;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+    #form .registerbutton {
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 4%;
+        margin-right: 10px;
+        height: 5vh;
+        border-radius: 4px;
+    }
+    #form .homebutton {
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 4%;
+        border-radius: 4px;
+        height: 5vh;
+    }
+    .checkbox-content .text {
+        font-size: 1.5vw;
+        /* justify-content: center; */
+        color: #fefefe;
+    }
+}
+
+
+/* Mobile Phone */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    .jajargenjang {
+        translate: 30% 0%;
+        width: 100%;
+    }
+    #form {
+        text-align: left;
+        position: absolute;
+        width: 60%;
+        margin: 0 70%;
+        padding: 20px 5% 20px 20px;
+        font-size: 12px;
+        z-index: 4;
+        height: 100%;
+        margin-left: 39vw;
+        margin-bottom: 10px;
+    }
+    #form h1 {
+        color: #fefefe;
+        text-align: right;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 7vw;
+        margin-bottom: 30px;
+        margin-right: -56vw;
+        margin-top: 10px;
+    }
+    .checkbox-content .text {
+        font-size: 2.5vw;
+        /* justify-content: center; */
+        color: #fefefe;
+    }
+}

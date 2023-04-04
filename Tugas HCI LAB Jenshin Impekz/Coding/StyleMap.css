@@ -1,0 +1,370 @@
+:root {
+    /* --primary:#b6895b; */
+    --primary: #8E6FBA;
+    --bg: #010101;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "SeoulHangang";
+    src: url(Assets/Font/seoulhangang/SeoulHangang-Bold.ttf);
+}
+
+body{
+    background-color: var(--primary);
+    font-family: "SeoulHangang";
+}
+
+h1{
+    color: #fff;
+    font-size: 8vw;
+    font-weight: 500;
+    text-align: center;
+    justify-self: center;
+}
+h2{
+    color: #fff;
+    font-size: 5vw;
+    font-weight: 500;
+    /* text-align: left; */
+}
+.content p{
+    line-height: 3vw;
+    word-spacing: 0.5vw;
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+
+
+/* Navbar */
+a.active{
+    text-shadow: #00E0FF;
+    border-bottom: 0.2rem solid #00E0FF;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 7%;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar .navbar-logo {
+    background-image: url(https://drive.google.com/uc?export=view&id=1a75V4F_zps0z2iyOXMY8spNdT5k3lFNQ);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 7rem;
+    height: 3.5rem;
+}
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.navbar .navbar-extra #register {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.navbar .navbar-nav a:hover {
+    text-shadow: 3px 3px 5px#00E0FF;
+    border-top: #00E0FF;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    border-top: 0.2rem solid #00E0FF;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #AEAEAE;
+    margin-top: 4px;
+}
+
+.navbar .navbar-extra a:hover {
+    color: #fefefe;
+}
+
+#hamburger-menu {
+    display: none;
+}
+/* Navbar End */
+
+/* Footer Start */
+footer{
+    /* margin: 2vw; */
+    background-color: #010101;
+    padding: 10px;   
+    font-family: 'Sarabun';
+}
+
+footer .content-footer{
+    color: #c6c6c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .content-footer #footer-logo{
+    width: 10vw;
+    height: auto;
+    animation: glowing 3s infinite;
+}
+@keyframes glowing {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px #a8faff);
+    }
+    50%
+    {
+        filter:none;
+    }
+}
+
+footer .content-footer .links a{
+    text-align: center;
+    font-size: 1vw;
+    color: #c6c6c6;
+    margin: 0 0.5vw;
+}
+
+footer .content-footer p{
+    text-align: center;
+    font-size: 1vw;
+}
+
+footer .content-footer #Copyright{
+    font-weight: bold;
+    font-size: 0.8vw;
+}
+
+footer .links a:hover {
+    border-bottom: 0.1rem solid #C6C6C6;
+}
+/* Footer End */
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+/* Teyvat Start */
+.teyvat{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://drive.google.com/uc?export=view&id=10Wu-zIILXA-e4JvnWdsaN-0dzZQ3r_Kb);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.teyvat p{
+    margin: 0 10vw;
+    text-align: center;
+}
+.teyvat .bot img{
+    width: 100%;
+    height: auto;
+    animation: floating-arrow 3s infinite;
+    /* animation-duration: 3s;
+    animation-iteration-count: infinite; */
+    animation-timing-function: ease-in-out;
+}
+.teyvat .bot img:hover{
+    filter: drop-shadow(0 0 6px #a8faff);
+}
+@keyframes floating-arrow{
+    0% {
+        transform:  translate(0, 0px);
+        /* filter: drop-shadow(0 0 10px #e6f3f7); */
+    }
+    50% {
+        transform:  translate(0, 7px);
+        /* filter:none; */
+    }
+    100% {
+        transform:  translate(0, -0px);
+        /* filter: drop-shadow(0 0 10px #e6f3f7); */
+    }
+}
+
+
+.teyvat .bot{
+    width: 1.7vw;
+    height: auto;
+    align-self: center;
+    margin-bottom: 2.5vh;
+}
+
+/* Teyvat End */
+
+/* Mondstadt Start */
+
+.mondstadt,
+.liyue,
+.inazuma,
+.sumeru{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://drive.google.com/uc?export=view&id=1X4jBdM8A2MphX5DlGztMBT2cNF5jM4c_);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+}
+.mondstadt .right img, 
+.liyue .right img, 
+.inazuma .right img, 
+.sumeru .right img{
+    width: 100%;
+    height: auto;
+}
+.mondstadt .right,
+.liyue .right,
+.inazuma .right,
+.sumeru .right{
+    width: 125vw;
+}
+.mondstadt .left,
+.liyue .left,
+.inazuma .left,
+.sumeru .left {
+    padding-right: 2vw;
+}
+/* Mondstadt End */
+
+/* Liyue Start */
+.liyue{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://drive.google.com/uc?export=view&id=1qEKCF6h5a_YIgLJ9CqpM7vzgLui7rROY);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+}
+/*
+.liyue .right img{
+    width: 100%;
+    height: auto;
+}
+.liyue .right{
+    width: 125vw;
+} */
+/* Liyue End */
+
+/* Inazuma Start */
+.inazuma{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://drive.google.com/uc?export=view&id=16rAHGyl_zUCMcX9LuotBO5TVr_RwdwHx);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Inazuma End */
+
+/* Sumeru Start */
+.sumeru{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://drive.google.com/uc?export=view&id=1cnQ6cbvwDwyhcX-qy_PTuoFMsuYi6vgu);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Sumeru End */
+
+/* Media Queries */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar-extra {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.3);
+    }
+}
+
+/* Mobile Phone */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
